@@ -1,8 +1,8 @@
 {
   "name": "DJCustomUIKit",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "summary": "项目中使用的自定义视图.",
-  "description": "TODO: Add long description of the pod here.",
+  "description": "TODO: ADJ long description of the pod here.",
   "homepage": "https://github.com/jaeysun/DJCustomUIKit.git",
   "license": {
     "type": "MIT",
@@ -13,16 +13,30 @@
   },
   "source": {
     "git": "https://github.com/jaeysun/DJCustomUIKit.git",
-    "tag": "0.0.1"
+    "tag": "0.0.2"
   },
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "DJCustomUIKit/DJMarqueeView.h",
+  "source_files": [
+    "DJCustomUIKit/DJCustomUIKit.h",
+    "DJCustomUIKit/DJCustomUIUtil.h",
+    "DJCustomUIKit/DJCustomUIUtil.m"
+  ],
+  "resources": "DJCustomUIKit/DJCustomUIKit.bundle",
+  "dependencies": {
+    "Masonry": [
+
+    ]
+  },
   "subspecs": [
     {
       "name": "DJMarqueeView",
-      "source_files": "DJCustomUIKit/DJMarqueeView/**/*"
+      "source_files": "DJCustomUIKit/DJMarqueeView/*"
+    },
+    {
+      "name": "DJImagePickerController",
+      "source_files": "DJCustomUIKit/DJImagePickerController/**/*"
     }
   ]
 }

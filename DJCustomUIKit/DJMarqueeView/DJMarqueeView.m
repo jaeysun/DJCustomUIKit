@@ -7,7 +7,7 @@
 //
 
 #import "DJMarqueeView.h"
-
+#import <Masonry/Masonry.h>
 @interface DJMarqueeView()<CAAnimationDelegate>
 
 @property (nonatomic, strong) UILabel *textLabel;
@@ -57,7 +57,7 @@
     CGRect rect = [message boundingRectWithSize:CGSizeMake(MAXFLOAT, self.bounds.size.height) options:(NSStringDrawingUsesLineFragmentOrigin) attributes:@{NSFontAttributeName:self.textLabel.font} context:nil];
     CGFloat textWidth = rect.size.width;
     // 跑马灯视图区域长度
-    CGFloat viewWidth = self.bounds.size.width;
+    CGFloat vieDJidth = self.bounds.size.width;
     // 创建动画对象
     CABasicAnimation *basicAni = [CABasicAnimation animation];
     // 设置动画属性
@@ -65,9 +65,9 @@
     // 设置动画的起始位置。也就是动画从哪里到哪里
     basicAni.fromValue = @(0);
     // 动画结束后，layer所在的位置
-    basicAni.toValue = @(-viewWidth-textWidth);
+    basicAni.toValue = @(-vieDJidth-textWidth);
     // 动画持续时间
-    double duration = (viewWidth+textWidth)/100.0;
+    double duration = (vieDJidth+textWidth)/100.0;
     basicAni.duration = duration;
     // 动画填充模式,动画结束后回到初始位置
     basicAni.fillMode = kCAFillModeRemoved;
@@ -79,14 +79,17 @@
     // animationDidStop 各种坑点，自己写定时器，完成该次动画后进行下一次动画
     // 如果上一次定时任务，还未执行，就从新开始了动画，就把上一次的定时任务取消了。例如，messages刷新
     [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(animationTimeAction) object:self.timeSep];// 取消定时任务
-    self.timeSep = [NSString stringWithFormat:@"%u",arc4random()%100000000];
+    self.timeSep = @"abcdefg";
     // 开启下一次定时任务
     [self performSelector:@selector(animationTimeAction) withObject:self.timeSep afterDelay:duration];
 }
 
 - (void)configSubviews {
     [self addSubview:self.textLabel];
-    self.textLabel.frame = CGRectMake(CGRectGetMaxX(self.bounds), 0, CGRectGetWidth(self.bounds), 100);
+    [self.textLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.mas_right);
+        make.top.bottom.height.equalTo(self);
+    }];
     self.clipsToBounds = YES;
 }
 

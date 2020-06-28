@@ -10,7 +10,12 @@
 #endif
 #endif
 
-#import "DJMarqueeView.h"
+#import "DJCustomUIKit.h"
+#import "DJCustomUIUtil.h"
+#import "DJImagePickerController.h"
+#import "DJImagePickerMacro.h"
+#import "DJImagePickerMaskView.h"
+#import "DJImagePickerPreView.h"
 #import "DJMarqueeView.h"
 
 FOUNDATION_EXPORT double DJCustomUIKitVersionNumber;

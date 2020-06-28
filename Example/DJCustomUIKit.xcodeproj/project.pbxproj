@@ -207,7 +207,7 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				787AC14FB43CD68E5EA1BA9E /* [CP] Embed Pods Frameworks */,
+				CAB97973CC0617A1C9C1A808 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -247,6 +247,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = jaeysun;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = A3528Q8DDD;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -295,7 +298,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		787AC14FB43CD68E5EA1BA9E /* [CP] Embed Pods Frameworks */ = {
+		CAB97973CC0617A1C9C1A808 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -303,10 +306,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-DJCustomUIKit_Example/Pods-DJCustomUIKit_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/DJCustomUIKit/DJCustomUIKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DJCustomUIKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -494,11 +499,12 @@
 			baseConfigurationReference = 8453AD021CCC0199426E890A /* Pods-DJCustomUIKit_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = A3528Q8DDD;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DJCustomUIKit/DJCustomUIKit-Prefix.pch";
 				INFOPLIST_FILE = "DJCustomUIKit/DJCustomUIKit-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.DJCustomUIKit-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
@@ -510,11 +516,12 @@
 			baseConfigurationReference = 32BC84DFEBE6F1FE3B35F754 /* Pods-DJCustomUIKit_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = A3528Q8DDD;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DJCustomUIKit/DJCustomUIKit-Prefix.pch";
 				INFOPLIST_FILE = "DJCustomUIKit/DJCustomUIKit-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.DJCustomUIKit-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;

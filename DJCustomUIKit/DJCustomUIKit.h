@@ -10,5 +10,6 @@
 #define DJCustomUIKit_h
 
 #import "DJMarqueeView.h"
+#import "DJImagePickerController.h"
 
 #endif /* DJCustomUIKit_h */

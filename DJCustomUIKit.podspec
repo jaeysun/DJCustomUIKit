@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DJCustomUIKit'
-  s.version          = '0.0.1'
+  s.version          = '0.0.2'
   s.summary          = '项目中使用的自定义视图.'
 
 # This description is used to generate tags and improve search results.
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+TODO: ADJ long description of the pod here.
                        DESC
 
   s.homepage         = 'https://github.com/jaeysun/DJCustomUIKit.git'
@@ -27,17 +27,24 @@ TODO: Add long description of the pod here.
   s.author           = { 'jaeysun' => 'jaeysun@163.com' }
   s.source           = { :git => 'https://github.com/jaeysun/DJCustomUIKit.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '10.0'
-
-  s.source_files = 'DJCustomUIKit/DJCustomUIKit.h'
-  s.subspec 'DJMarqueeView' do |dd|
-  dd.source_files = 'DJCustomUIKit/DJMarqueeView/*'
+  s.ios.deployment_target = '8.0'
+  s.source_files = ['DJCustomUIKit/DJCustomUIKit.h','DJCustomUIKit/DJCustomUIUtil.h','DJCustomUIKit/DJCustomUIUtil.m']
+#  s.resource_bundles = {
+#      'DJImagePickerController' => ['DJCustomUIKit/DJCustomUIKit.bundle/*.png']
+#  }
+  s.resource = 'DJCustomUIKit/DJCustomUIKit.bundle'
+  s.subspec 'DJMarqueeView' do |da|
+      da.source_files = 'DJCustomUIKit/DJMarqueeView/*'
   end
-  # s.resource_bundles = {
-  #   'DJCustomUIKit' => ['DJCustomUIKit/Assets/*.png']
-  # }
+  
+  s.subspec 'DJImagePickerController' do |db|
+      db.source_files = 'DJCustomUIKit/DJImagePickerController/**/*'
+     
+  end
+  
+  
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'Masonry'
 end

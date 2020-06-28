@@ -13,7 +13,6 @@ NS_ASSUME_NONNULL_BEGIN
 @interface DJMarqueeView : UIView
 
 @property (nonatomic, strong) UIColor *textColor;
-
 @property (nonatomic, copy) NSArray <NSString *>* messages;
 
 @end
