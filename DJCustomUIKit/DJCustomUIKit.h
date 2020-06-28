@@ -1,13 +1,14 @@
 //
-//  DJMarqueeView.h
+//  DJCustomUIKit.h
 //  DJCustomUIKit
 //
 //  Created by Jaesun on 2020/6/28.
 //  Copyright © 2020 jaeysun. All rights reserved.
 //
 
-#ifndef DJMarqueeView_h
-#define DJMarqueeView_h
+#ifndef DJCustomUIKit_h
+#define DJCustomUIKit_h
 
+#import "DJMarqueeView.h"
 
-#endif /* DJMarqueeView_h */
+#endif /* DJCustomUIKit_h */

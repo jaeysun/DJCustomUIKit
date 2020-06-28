@@ -8,6 +8,8 @@
 
 #import "DJViewController.h"
 
+#import <DJCustomUIKit/DJCustomUIKit.h>
+
 @interface DJViewController ()
 
 @end
@@ -17,7 +19,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	
+    DJMarqueeView *marqueeView = [[DJMarqueeView alloc] initWithFrame:CGRectMake(0, 300, self.view.bounds.size.width, 100)];
+    [self.view addSubview:marqueeView];
+    
+    marqueeView.messages = @[@"Dispose of any resources that can be recreated.",@"Dispose of",@"any resources that can be recreated."];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning

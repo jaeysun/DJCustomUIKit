@@ -1,0 +1,6 @@
+framework module DJCustomUIKit {
+  umbrella header "DJCustomUIKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

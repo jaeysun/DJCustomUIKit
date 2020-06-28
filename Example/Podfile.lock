@@ -1,0 +1,18 @@
+PODS:
+  - DJCustomUIKit (0.0.1):
+    - DJCustomUIKit/DJMarqueeView (= 0.0.1)
+  - DJCustomUIKit/DJMarqueeView (0.0.1)
+
+DEPENDENCIES:
+  - DJCustomUIKit (from `../`)
+
+EXTERNAL SOURCES:
+  DJCustomUIKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  DJCustomUIKit: e1762e660a6d803dae4a99f88650944cc5e0ebac
+
+PODFILE CHECKSUM: cb0bbeb8e3508a09f61bee9c0c7571fa6de0f2d7
+
+COCOAPODS: 1.9.1

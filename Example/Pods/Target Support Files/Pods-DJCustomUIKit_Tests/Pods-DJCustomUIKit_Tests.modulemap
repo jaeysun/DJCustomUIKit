@@ -1,0 +1,6 @@
+framework module Pods_DJCustomUIKit_Tests {
+  umbrella header "Pods-DJCustomUIKit_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
