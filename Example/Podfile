@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'DJCustomUIKit_Example' do
+  pod 'DJCustomUIKit', :path => '../'
+
+  target 'DJCustomUIKit_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
